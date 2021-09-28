@@ -1,0 +1,327 @@
+*{scroll-behavior:smooth;}
+
+#mainScreen{
+height:100%;
+}
+
+#fixed-navbar{
+position:fixed;
+width:100%;
+height:8%;
+top:0;
+z-index:1;
+background:white;
+}
+
+#body{
+width:100%;
+margin-top:5%;
+padding-bottom:5%;
+}
+
+#navbar{
+height:100%;
+}
+
+#navbar-desktop{
+height:100%;
+width:100%;
+}
+
+#navbar-mobile{
+height:100%;
+width:100%;
+}
+
+#navbar-center{width:15%;}
+
+#navbar-right{width:15%;}
+
+/*Footer*/
+
+#footer{
+height:80%;
+}
+
+#footer-desktop{
+height:120%;
+padding:5% 3%;
+background:linear-gradient(215deg,white 39%,#00f9 1%);
+}
+
+#footer-mobile{
+
+}
+
+#icon{font-size:25px;color:white;}
+
+#icon:hover{transform:scale(1.3);transition:0.2s;}
+
+Button{width:max-content;}
+
+/*for card*/
+#card{
+height:460px;
+width:28%;
+float:left;
+border:1px solid #ccc;
+box-shadow:0px 1px 3px #aaa;
+overflow:hidden;
+cursor:pointer;
+}
+
+#card p{
+font-weight:100;
+margin:0;
+}
+
+#card img{
+height:50%;
+width:100%;
+border-radius:5px 5px 0px 0px;
+}
+
+#card #company{
+height:30%;
+width:100%;
+}
+
+#card #details{
+height:40%;
+}
+
+#card #actions{
+height:30%;
+}
+
+#card #actions #more{
+width:max-content;
+text-transform:none;
+font-weight:100;
+}
+
+#card #actions #offer{
+border:1px solid yellow;
+border-radius:10px;
+background:yellow;
+padding:3px;
+color:red;
+}
+
+
+#card #avatar{
+border:1px solid #aaa;
+width:20%;
+height:100%;
+border-radius:100%;
+}
+
+#card #building:hover{
+transform:scale(1.1);
+transition:1s;
+}
+
+#card #building{
+transition:1s;
+}
+
+/*detailedCard.js*/
+#detailedView{
+padding-bottom:50px;
+width:100%;
+/*height:3000px;*/
+}
+
+#detailedView #image{
+height:500px;
+}
+
+#detailedView #tabview{
+top:0;
+color:white;
+background:#000;
+border-radius:0px 0px 15px 15px;
+}
+
+#detailedView #tabview button{
+margin-right:30px;
+cursor:pointer;
+font-weight:300;
+}
+
+#detailedView #snapshots{
+overflow-x:scroll;
+}
+
+#heading_pricing,#heading_facilities,#heading_offer,#heading{
+font-size:30px;
+font-weight:500;
+}
+
+#detailedView #facilities{
+/*height:200px*/
+width:300px;
+}
+
+#detailedView #facilities #icondiv{
+display:flex;
+flex-direction:column;
+margin-right:40px;
+align-items:center;
+}
+
+#detailedView #facilities #icondiv #icon{
+width:40px;
+height:40px;
+border-radius:100%;
+}
+
+#detailedView #building p,#detailedView #place p{
+font-size:30px;
+font-weight:500;
+margin-bottom:10px;
+}
+
+#detailedView #building,#detailedView #place{
+font-size:17px;
+font-weight:200;
+width:100%;
+}
+
+
+#detailedView #snapshots #image{
+width:300px;
+height:250px;
+margin-right:10px;
+border-radius:10px;
+}
+
+#detailedView #contact_button{
+background:#00f9;
+padding:8px 10px;
+border-radius:10px;
+color:white;
+box-shadow:1px 2px 3px black;
+}
+
+#detailedView #contact_button:active,#detailedView #dialog_contact #dialog button:active,#login_dialog button:active,#signup_dialog button:active,#forgot_password_dialog button:active,#recover_password_dialog button:active{
+box-shadow:0px 0px 0px black;
+transform:translateY(5px);
+}
+
+#detailedView #dialog_contact{
+width:100%;
+height:100%;
+background:#aaa8;
+position:fixed;
+top:0px;
+display:flex;
+justify-content:center;
+align-items:center;
+display:none;
+}
+
+@keyframes zoom{
+from{transform:scale(0);opacity:0;}
+to{transform:scale(1);opacity:1;}	
+}
+
+#detailedView #dialog_contact #dialog,#login_dialog,#signup_dialog,#forgot_password_dialog,#recover_password_dialog{
+transition:1s;
+animation:zoom 0.5s linear;
+}
+
+#forgot_password_dialog,#recover_password_dialog{
+display:none
+}
+
+#detailedView #dialog_contact #dialog input,textarea,#login_dialog input,#forgot_password_dialog input,#signup_dialog input,#recover_password_dialog input{
+width:80%;
+height:30px;
+font-size:17px;
+padding-left:5px;
+margin:5px 0px 10px 0px;
+border:1px solid black;
+border-radius:5px;
+}
+
+#detailedView #dialog_contact #dialog textarea{
+height:100px;
+}
+
+#detailedView #dialog_contact #dialog button,#login_dialog button,#signup_dialog button,#forgot_password_dialog button,#recover_password_dialog button{
+padding:5px 10px;
+background:#00f9;
+color:white;
+border-radius:10px;
+box-shadow:1px 2px 3px black;
+}
+
+/*Signup.js*/
+#login,#signup{
+    top:0;
+    background:#aaa8;
+    display:none;
+}
+
+@media only screen and (min-width:1500px){
+#card{
+height:550px;
+width:26%;
+}
+
+#footer{
+height:60%;
+}
+
+#footer-desktop{
+height:100%;
+padding:5% 3%;
+background:linear-gradient(200deg,white 40%,#00f9 1%);
+}
+
+}
+
+/*signup.js*/
+#signup{
+background:#aaa8;
+}
+
+
+@media only screen and (max-width:900px){
+#detailedView{
+width:100%;
+padding-bottom:100px;
+}
+
+#detailedView #image{
+height:300px;
+width:100%;
+}
+
+#detailedView #building,#detailedView #place{
+font-weight:300;
+}
+
+#card{
+height:450px;
+width:90%;
+}
+
+#card p{
+font-weight:300;
+}
+
+#card #actions #more{
+font-weight:300;
+}
+
+#body{
+margin-top:15%;
+padding-bottom:10%;
+}
+
+#icon{color:black;}
+#footer-desktop{padding:0;background:white;}
+}
+

@@ -1,0 +1,24 @@
+{
+"Treetops":{
+	"name":"tree tops",
+	"detail":"it is very cost and is very comfortable place.In these days it's demand is high",
+	"building_image":"../images/building.jpg",
+	"snapshots":["../images/building.jpg","../images/building1.jpg","../images/building2.jpg"],
+	"facilities":{"water":"24*7 water facility","power":"24*7 electricity","pool":"swimming pool","security":"security"},
+	"about_building":"Tree tops is a concept designed to create an inspirational lifestyle combining luxury with affordablility in the upcoming high profile location of East Tirupati.MVV & LNS Consructions is a sister concern of M/s.MVV Builders. Which has more than 30 years of vast experiance in the field of Real Estate and Infrastructure Projects. The group has successfully executed more than 100 ventures in Telangana and Andhra Pradesh.",
+	"about_place":"Isnapur is a developing residential neighborhood located on the outskirts of Hyderabad. It is strategically located along the NH 65. Mutangi, Pocharam, Pashamylaram, Ramachandra Puram, Citizens Colony, and Lakdaram are the nearby localities. This area is dominated by plotted development.",
+	"pricing":"₹1.50 Cr - ₹2.00 Cr",
+	"offer":"2% reduction in cost in the month of january and also you have the chance to pay through instalments"},
+	
+
+"Bandi's capital Gateway":{
+	"name":"bandi's gateway",
+	"detail":"it is very cost and is very comfortable place.In these days it's demand is high",
+	"building_image":"../images/building1.jpg",
+	"facilities":{"water":"24*7 water facility","power":"24*7 electricity","pool":"swimming pool"},
+	"snapshots":["../images/building1.jpg","../images/building.jpg","../images/building2.jpg"],
+	"about_building":"Bandi's top is a concept designed to create an inspirational lifestyle combining luxury with affordablility in the upcoming high profile location of East Tirupati.MVV & LNS Consructions is a sister concern of M/s.MVV Builders. Which has more than 30 years of vast experiance in the field of Real Estate and Infrastructure Projects. The group has successfully executed more than 100 ventures in Telangana and Andhra Pradesh.",
+	"about_place":" Proximity to employment hubs and industrial area, smooth connectivity via NH 65 and Outer Ring Road (ORR) are driving the demand of real estate in the locality. Virtusa Lifespaces Celosia Nest, Sandstone Siara City, Aparana Avani are some of the key residential projects in this locality.",
+	"pricing":"₹38.1 Lac - ₹50.00 Lac"	
+	}
+}

@@ -1,0 +1,106 @@
+#addEstate{
+    width:100%;
+}
+
+#addEstate #innerpart{
+    width:50%;
+	border:2px solid #aaa;
+	border-radius:10px;
+}
+
+
+#addEstate #innerpart #heading{
+    color:black;
+    font-weight:500;
+    font-size:30px;
+}
+
+#addEstate #innerpart p{
+    color:black;
+}
+
+#addEstate #innerpart input,select,textarea{
+	margin:8px 0px 8px 0px;
+	font-size:17px;
+	animation-delay:0.5s;
+}
+
+
+#addEstate #submit_button{
+background:#00f9;
+padding:8px 10px;
+border-radius:10px;
+color:white;
+box-shadow:1px 2px 3px black;
+}
+
+#addEstate button:active{
+box-shadow:0px 0px 0px black;
+transform:translateY(3px);
+}
+
+
+#addEstate #innerpart select,textarea{
+	border-radius:6px;
+	border:1px solid #555;
+	padding:2px 3px;
+}
+
+#addEstate #innerpart input[type="text"]{
+	outline:none;
+	border-radius:6px;
+	width:70%;
+	padding:2px 3px;
+	border-bottom:1px solid #555;
+}
+
+#addEstate #innerpart input[type="text"]:focus{
+	background:#eeec;
+	transition:1s;
+}
+
+
+#addEstate #innerpart select{
+	width:30%;
+	height:30px;
+	background:#ddd;
+}
+
+#addEstate #innerpart textarea{
+	width:70%;
+	height:120px;
+}
+
+@keyframes zoom1{
+	from{opacity:0;}
+	to{opacity:1;}
+}
+
+@keyframes red_border{
+	0%{border:3px solid red;}
+	90%{border:3px solid red;}
+	100%{border:auto;}
+}
+
+@keyframes red_border2{
+	0%{border:3px solid red;}
+	90%{border:3px solid red;}
+	100%{border:auto;}
+}
+
+@media only screen and (max-width:900px){
+	#addEstate #innerpart{
+    	width:95%;
+	}
+	#addEstate #innerpart textarea{
+		width:80%;
+		height:90px;
+	}
+	#addEstate #innerpart select{
+		width:60%;
+		height:30px;
+	}
+}
+
+
+
