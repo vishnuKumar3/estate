@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{createContext,useState} from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import './styles/tailwind.css'
@@ -15,8 +15,13 @@ import AddEstate from "./Add_estate.js";
 import {BrowserRouter,Route} from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
 
+export var Logincontext=createContext({});
+
 function Index(){
+	const [check,setCheck]=useState(false);
 	return(
+		<>
+		<Logincontext.Provider value={{check,setCheck}}>
 		<BrowserRouter>
 			<Route exact path="/" component={Main}/>
 			<Route path="/navbar" component={Navbar}/>
@@ -27,6 +32,8 @@ function Index(){
 			<Route path="/login" component={Login}/>
 			<Route path="/addEstate" component={AddEstate}/>
 		</BrowserRouter>
+		</Logincontext.Provider>
+		</>
 	);
 	}
 

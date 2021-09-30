@@ -56,7 +56,7 @@ def login(user_credentials:user_details=Body(...)):
 				"detail":"successfully logged in",
 				"key":token
 				})
-			response.set_cookie(key="Authorization",value=token,httponly=True)	
+			response.set_cookie(key="Authorization",value=token)	
 			return response
 		else:
 			return JSONResponse({

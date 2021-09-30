@@ -3,10 +3,24 @@ import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import Login from "./login.js";
 import Signup from "./signup.js";
-import {useEffect, useState} from "react";
+import {useEffect, useState,useContext} from "react";
+import {Logincontext} from "./index.js";
+import axios from "axios";
 
+const logout=async ()=>{
+	var result=await axios.get("http://localhost:8000/security/logout");
+	if(result.data.status_code===200) {
+			alert(result.data.detail);
+			var d=new Date();
+			d.setTime(d.getTime()-60*1000);
+			document.cookie="Authorization=;expires="+d.toUTCString();
+			return true;
+			}
+	else{ alert(result.data.detail);return false;}
+}
 
 const Desktop=()=>{
+	const {check,setCheck}=useContext(Logincontext);
 	return(
 		<div className="flex flex-row justify-around items-center" id="navbar-desktop">
 			<Typography variant="h4">Logo</Typography>
@@ -15,10 +29,19 @@ const Desktop=()=>{
 				<Button href="/addEstate" color="primary">Add Estate</Button>
 				{/*<Button color="primary">Sell</Button>*/}
 			</div>
+			{check?
+			<div className="flex flex-row justify-around" id="navbar-right">
+				<Button onKeyDown={()=>{
+					logout().then((res)=>{
+					if(res) setCheck(!check);
+				})}} className="login_button" disbaleElevation>Logout</Button>
+				<Button className="signup_button" disableElevation>SignUp</Button>
+			</div>:
 			<div className="flex flex-row justify-around" id="navbar-right">
 				<Button className="login_button" disbaleElevation>Login</Button>
 				<Button className="signup_button" disableElevation>SignUp</Button>
 			</div>
+			}
 		</div>
 	);
 }
