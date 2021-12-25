@@ -28,6 +28,24 @@ height:100%;
 width:100%;
 }
 
+#navbar-desktop #navigation{
+height:300px;
+width:200px;
+z-index:1;
+border:1px solid black;
+top:50px;
+position:absolute;
+display:none;
+right:4%;
+transition:1s;
+animation:navigation 1s linear;
+}
+
+@keyframes navigation{
+from{height:0px;}
+to{height:300px;}
+}
+
 #navbar-mobile{
 height:100%;
 width:100%;

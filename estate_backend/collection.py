@@ -9,7 +9,7 @@ else:
 	estate=db.create_graph("estate")
 
 estate.traverse(
-	start_vertex="user/nvk@gmail.com",
+	start_vertex="user/narayanavishnukumar@gmail.com",
 	direction="outbound",
 	strategy="bfs"
 )
@@ -32,6 +32,7 @@ def get_edge(name,from_vertices,to_vertices):
 #vertices
 building=get_vertex("building")
 user=get_vertex("user")
+profile=get_vertex("profile")
 #edges
 building_user=get_edge("building_user",["building"],["user"])
 

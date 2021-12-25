@@ -4,6 +4,7 @@ import './index.css';
 import './styles/tailwind.css'
 import './styles/style.css';
 import "./styles/add_estate.css";
+import "./styles/profile.css";
 import Navbar from "./navbar.js";
 import Footer from "./footer.js";
 import Main from "./mainScreen.js";
@@ -12,6 +13,7 @@ import DetailedCard from "./detailedCard.js";
 import Signup from "./signup.js";
 import Login from "./login.js";
 import AddEstate from "./Add_estate.js";
+import Profile from "./profile.js";
 import {BrowserRouter,Route} from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
 
@@ -31,6 +33,7 @@ function Index(){
 			<Route path="/signup" component={Signup}/>
 			<Route path="/login" component={Login}/>
 			<Route path="/addEstate" component={AddEstate}/>
+			<Route path="/profile" component={Profile}/>
 		</BrowserRouter>
 		</Logincontext.Provider>
 		</>

@@ -2,6 +2,7 @@ from fastapi import APIRouter,Body,status,Depends,Request,status,Query,UploadFil
 from fastapi.responses import JSONResponse
 from passlib.context import CryptContext
 from datetime import datetime
+from pydantic import BaseModel
 from jose import jwt
 import random
 from fastapi_mail import MessageSchema,FastMail,ConnectionConfig
@@ -26,8 +27,24 @@ key="ab79b54f3584c091b8f9b1e1c2b26a1c42e010162b8777ee01a97b2c4795178a"
 Algorithm="HS256"
 pwd_context=CryptContext(schemes=["bcrypt"],deprecated="auto")
 
-@security_router.get("/current_user")
-def get_current_user(request:Request):
+
+@security_router.post("/current_user")
+def get_current_user(cookie_data:str=Body(...)):
+	try:
+		#result=jwt.decode(request.cookies.get("Authorization"),key,algorithms=[Algorithm])
+		result=jwt.decode(cookie_data,key,algorithms=[Algorithm])
+		return JSONResponse({
+			"status_code":status.HTTP_200_OK,
+			"detail":result
+			})
+	except Exception as e:
+		return JSONResponse({
+			"status_code":status.HTTP_404_NOT_FOUND,
+			"detail":"user not signed in"
+			})
+
+@security_router.post("/current_user_fastapi")
+def get_current_user_fastapi(request:Request):
 	try:
 		result=jwt.decode(request.cookies.get("Authorization"),key,algorithms=[Algorithm])
 		return JSONResponse({

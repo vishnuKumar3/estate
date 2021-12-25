@@ -31,12 +31,16 @@ const Desktop=()=>{
 			</div>
 			{check?
 			<div className="flex flex-row justify-around" id="navbar-right">
-				<Button onKeyDown={()=>{
+				<Button onMouseDown={()=>{
 					logout().then((res)=>{
 					if(res) setCheck(!check);
-				})}} className="login_button" disbaleElevation>Logout</Button>
+				})}} disbaleElevation>Logout</Button>
 				<Button className="signup_button" disableElevation>SignUp</Button>
-			</div>:
+				{/*<button className="profile">profile</button>*/}
+			</div>
+			/*<div id="navigation" className="rounded-xl bg-black">
+				</div>*/
+			:
 			<div className="flex flex-row justify-around" id="navbar-right">
 				<Button className="login_button" disbaleElevation>Login</Button>
 				<Button className="signup_button" disableElevation>SignUp</Button>
@@ -50,6 +54,7 @@ const MobileView=()=>{
 	const [open_var,check]=useState(false);
 	return(
 		<div className="flex flex-row items-center" id="navbar-mobile">
+			{/*<button className="profile hidden invisible">profile</button>*/}
 			<Button onClick={()=>check(true)} color="primary"><MenuIcon/></Button>
 			<div className="flex flex-row justify-between w-full h-full items-center">
 				<Typography variant="h4">Logo</Typography>				
@@ -74,7 +79,24 @@ const MobileView=()=>{
 	}
 
 export default function Navbar(){
+	/*window.onload=async function(){
+		var res=document.cookie.split(";").filter(
+				(value,index)=>{
+					if(value.includes("Authorization"))
+						return index;
+					 });
+		var cookie=res[0].split("=")[1].toString();
+		await axios({
+			method:"post",
+			url:"http://localhost:8000/security/current_user",
+			data:cookie
+			}
+			).then((res)=>{console.log(res.data);})
+	}*/
 	useEffect(()=>{
+		/*document.getElementsByClassName("profile")[0].addEventListener("click",function(){
+			document.getElementById("navigation").style.display="block";
+		})*/
 		document.getElementById("login_close_button").addEventListener("click",function(){
 			document.getElementById("login").style.display="none";
 		});

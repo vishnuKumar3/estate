@@ -1,0 +1,39 @@
+#profile #profileBox{
+border:1px solid #0005;
+padding:5px 20px;
+height:92%;
+}
+
+#profile #profileTop{
+height:25%;
+}
+
+#profile #profileTop img{
+border-radius:100%;
+height:100%;
+}
+
+#profile #profileBox #about{
+text-indent:10%;
+line-height:27px;
+}
+
+@media only screen and (min-width:1500px){
+#profile #profileBox{
+height:55%;
+}
+}
+
+@media only screen and (max-width:900px){
+#profile{
+height:120%;
+}
+
+#profile #profileTop{
+height:30%;
+}
+
+#profile #profileTop img{
+height:60%;
+}
+}
