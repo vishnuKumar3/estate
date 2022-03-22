@@ -29,9 +29,9 @@ db=access_db()
 
 
 conn=ConnectionConfig(
-MAIL_FROM="narayanavishnukumarnvk@gmail.com",
-MAIL_USERNAME="narayanavishnukumarnvk@gmail.com",
-MAIL_PASSWORD="kumar321",
+MAIL_FROM="",
+MAIL_USERNAME="",
+MAIL_PASSWORD="",
 MAIL_PORT=587,
 MAIL_SERVER="smtp.gmail.com",
 MAIL_TLS=True,
